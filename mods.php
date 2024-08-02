@@ -1,5 +1,5 @@
 <?php
-const MODS_URL = 'https://raw.githubusercontent.com/AntyleYT/AntylerMCmod/master/mods.php?token=GHSAT0AAAAAACUUG4VHNGOV6WNAC6FFXTZOZVM4QYQ';
+const MODS_URL = 'https://github.com/AntyleYT/AntylerMCmod/tree/master/mods';
 const MODS_FOLDER = __DIR__ . '/mods/';
 $json = [
     'mods' => []
