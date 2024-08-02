@@ -1,5 +1,5 @@
 <?php
-const EXTFILES_URL = 'https://github.com/AntyleYT/AntylerMCmod/tree/master/src/main/java/fr/antyle/antylerMCmod/';
+const EXTFILES_URL = 'https://github.com/AntyleYT/AntylerMCmod/tree/master/mods';
 const EXTFILES_FOLDER = __DIR__ . '/extfiles';
 $json = [
     'extfiles' => []
