@@ -1,20 +1,20 @@
 <?php
-const EXTFILES_URL = 'https://github.com/AntyleYT/AntylerMCmod/tree/master/mods';
-const EXTFILES_FOLDER = __DIR__ . '/extfiles';
+const MODS_URL = 'https://raw.githubusercontent.com/AntyleYT/AntylerMCmod/master/mods.php?token=GHSAT0AAAAAACUUG4VHNGOV6WNAC6FFXTZOZVM4QYQ';
+const MODS_FOLDER = __DIR__ . '/mods/';
 $json = [
-    'extfiles' => []
+    'mods' => []
 ];
-$extfiles = [];
-$directory = array_diff(scandir(EXTFILES_FOLDER), ['.', '..']);
+$mods = [];
+$directory = array_diff(scandir(MODS_FOLDER), ['.', '..']);
 foreach ($directory as $file) {
-    $extfiles[] = $file;
+    $mods[] = $file;
 }
-foreach ($extfiles as $extfile) {
-    $json['extfiles'][] = [
-        'path' => $extfile,
-        'downloadURL' => EXTFILES_URL . '/' . $extfile,
-        'sha1' => sha1_file(EXTFILES_FOLDER . '/' . $extfile),
-        'size' => filesize(EXTFILES_FOLDER . '/' . $extfile)
+foreach ($mods as $mod) {
+    $json['mods'][] = [
+        'name' => $mod,
+        'downloadURL' => MODS_URL . '/' . $mod,
+        'sha1' => sha1_file(MODS_FOLDER . '/' . $mod),
+        'size' => filesize(MODS_FOLDER . '/' . $mod)
     ];
 }
 header('Content-Type: application/json');
